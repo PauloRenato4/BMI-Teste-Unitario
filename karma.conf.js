@@ -1,5 +1,5 @@
 // Karma configuration
-// Generated on Sun Nov 06 2016 23:45:03 GMT-0200 (Horário brasileiro de verão)
+// Generated on Mon Nov 07 2016 00:15:03 GMT-0200 (Horário brasileiro de verão)
 
 module.exports = function(config) {
   config.set({
