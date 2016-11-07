@@ -1,25 +1,19 @@
-'use strict';
-
 var FactorialService = (function () {
 
-    function _isValidNumber(number) {
-        return (number !== undefined)
-            && (typeof(number) !== 'string')  
-            && (number > -1);
+    var _results = [1, 1];
+      
+    var _reg = new RegExp('^[0-9]+$');   
+     
+    function _isNumberValid(number) {
+        return (_reg.test(number));        
     }
-
+    
     function calculate(number) {
-        if (_isValidNumber(number)) {
-            var result = 1;
-            if (number === 0 || number === 1) return result;
-
-            for (var i = 1; i <= number; i++) {
-                result = result * i;
-            }
-
-            return result;
+        if(!_isNumberValid(number)) return null;
+        while(number >= _results.length) {
+            _results.push(_results.length * calculate(_results.length - 1));
         }
-        return null;
+        return _results[number];
     }
 
     //public api

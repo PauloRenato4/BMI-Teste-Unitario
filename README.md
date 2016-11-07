@@ -1,2 +1,3 @@
-# BMI-Teste-Unitario
-Teste unitario utilizano NPM, Jasmine e Karma
+# Factorial Calculator
+
+Teste para calcular fatorial
